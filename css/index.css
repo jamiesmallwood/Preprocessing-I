@@ -163,10 +163,15 @@ header nav {
   width: 60%;
   padding: 2%;
 }
+@media (max-width: 500px) {
+  header nav {
+    width: 90%;
+  }
+}
 header a {
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
-  padding: 5%;
+  padding: 5% 2%;
   color: #f9f9f9;
   background-color: #3C373B;
   transition: 0.3s ease-in-out;
@@ -183,6 +188,7 @@ header a:hover {
   height: 60vh;
   background: url('../img/buddy.jpg') no-repeat center center;
   flex-direction: column;
+  text-align: center;
 }
 .intro-container h1 {
   font-family: 'Lato', sans-serif;
@@ -191,7 +197,7 @@ header a:hover {
   padding: 18% 0;
 }
 .intro-container h4 {
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1rem;
 }
 .contact-container {
@@ -208,8 +214,76 @@ header a:hover {
   color: #3C373B;
   background-color: #f9f9f9;
   transition: 0.3s ease-in-out;
+  min-width: 20%;
+  text-align: center;
 }
 .contact-container a:hover {
   background-color: #4c494c;
   transition: 0.3s ease-in-out;
+}
+@media (max-width: 500px) {
+  .contact-container a {
+    padding: 5%;
+    min-width: 40%;
+  }
+}
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .skills-container {
+    flex-direction: column;
+  }
+}
+.skills-container div {
+  padding: 2%;
+}
+.skills-container div p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.skills-container h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.work-container {
+  background-color: #f9f9f9;
+  color: #3C373B;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+.work-container td {
+  padding: 2%;
+}
+.work-container p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 2%;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+footer p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+}
+/* CSS Animations */
+body {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }

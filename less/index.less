@@ -123,17 +123,23 @@ a {
 
 @image-url: '../img/buddy.jpg';
 
+@mobile: 500px;
+
 header {
 	.flex-centered();
 	nav {
 		.flex-space();
 		width: 60%;
-		.padding(2%)
+		.padding(2%);
+
+		@media (max-width: @mobile) {
+			width: 90%;
+		}
 	}
 
 	a {
 		.nav-link();
-		.padding(5%);
+		.padding(5% 2%);
 		color: @offwhite;
 		background-color: @darkgray;
 		transition: 0.3s ease-in-out;
@@ -151,6 +157,7 @@ header {
 	height: 60vh;
 	background: url(@image-url) no-repeat center center;
 	flex-direction: column;
+	text-align: center;
 
 	h1 {
 		font-family: @lato;
@@ -160,7 +167,7 @@ header {
 	}
 
 	h4 {
-		font-family: @merri;
+		font-family: @lato;
 		font-size: @med-font;
 	}
 }
@@ -176,10 +183,80 @@ header {
 		color: @darkgray;
 		background-color: @offwhite;
 		transition: 0.3s ease-in-out;
+		min-width: 20%;
+    	text-align: center;
 
 		&:hover {
 			background-color: @medgray;
 			transition: 0.3s ease-in-out;
 		}
+
+		@media (max-width: @mobile) {
+			.padding(5%);
+			min-width: 40%;
+		}
 	}
+}
+
+.skills-container {
+	.flex-centered();
+	.padding(2%);
+
+	@media (max-width: @mobile) {
+		flex-direction: column;
+	}
+
+	div {
+		.padding(2%);
+
+		p {
+			font-family: @lato;
+			font-size: @small-font;
+			line-height: 1.5;
+		}
+	}
+
+	h2 {
+		font-family: @lato;
+		font-size: @med-font + .3;
+		font-weight: @bold;
+		line-height: 1.4;
+	}
+}
+
+.work-container {
+	background-color: @offwhite;
+	color: @darkgray;
+	.border-radius(5px);
+	.flex-centered();
+	.padding(2%);
+
+	td {
+		.padding(2%);
+	}
+	p {
+		font-family: @lato;
+		font-size: @small-font;
+		line-height: 1.5;
+		.padding(2%);
+	}
+}
+
+footer {
+	.flex-centered();
+	.padding(5%);
+
+	p {
+		font-family: @lato;
+		font-size: @small-font;
+	}
+}
+
+/* CSS Animations */
+
+body {
+    -webkit-transition:all .5s ease-in-out;
+         -moz-transition:all .5s ease-in-out;
+               -o-transition:all .5s ease-in-out;
+                     transition:all .5s ease-in-out;
 }
