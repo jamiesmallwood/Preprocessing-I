@@ -57,3 +57,129 @@ html, body {
     height: 100%;
 }
 
+body {
+	font-size: 62.5%;
+	background-color: @darkgray;
+	color: @offwhite;
+}
+
+.main-container {
+	max-width: 880px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Buddy's Resume */
+
+/* Colors */
+
+@darkgray: #3C373B;
+@medgray: #4c494c;
+@offwhite: #f9f9f9;
+
+/* Fonts */
+
+@lato: 'Lato', sans-serif;
+@merri: 'Merriweather', sans-serif;
+
+@small-font: .8rem;
+@med-font: 1rem;
+@large-font: 6rem;
+
+@regular: normal;
+@bold: bold;
+
+/* Mixins */
+
+.flex-centered() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-space() {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-link() {
+	font-family: @lato;
+	font-size: @med-font;
+}
+
+.padding(@padding: 1% 2%) {
+	padding: @padding;
+}
+
+.border-radius(@radius: 10px) {
+	border-radius: @radius;
+}
+
+/* Variables */
+
+@image-url: '../img/buddy.jpg';
+
+header {
+	.flex-centered();
+	nav {
+		.flex-space();
+		width: 60%;
+		.padding(2%)
+	}
+
+	a {
+		.nav-link();
+		.padding(5%);
+		color: @offwhite;
+		background-color: @darkgray;
+		transition: 0.3s ease-in-out;
+
+		&:hover {
+			background-color: @medgray;
+			transition: 0.3s ease-in-out;
+		}
+	}
+}
+
+.intro-container {
+	.flex-centered();
+	.border-radius(5px);
+	height: 60vh;
+	background: url(@image-url) no-repeat center center;
+	flex-direction: column;
+
+	h1 {
+		font-family: @lato;
+		font-size: @large-font;
+		font-weight: @bold;
+		.padding(18% 0);
+	}
+
+	h4 {
+		font-family: @merri;
+		font-size: @med-font;
+	}
+}
+
+.contact-container {
+	.flex-centered();
+	.padding(2%);
+	
+	a {
+		.nav-link();
+		.padding(2%);
+		.border-radius(5px);
+		color: @darkgray;
+		background-color: @offwhite;
+		transition: 0.3s ease-in-out;
+
+		&:hover {
+			background-color: @medgray;
+			transition: 0.3s ease-in-out;
+		}
+	}
+}
