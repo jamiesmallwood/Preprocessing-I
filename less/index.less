@@ -129,7 +129,6 @@ header {
 	.flex-centered();
 	nav {
 		.flex-space();
-		width: 60%;
 		.padding(2%);
 
 		@media (max-width: @mobile) {
@@ -139,7 +138,7 @@ header {
 
 	a {
 		.nav-link();
-		.padding(5% 2%);
+		.padding(5%);
 		color: @offwhite;
 		background-color: @darkgray;
 		transition: 0.3s ease-in-out;
@@ -147,6 +146,10 @@ header {
 		&:hover {
 			background-color: @medgray;
 			transition: 0.3s ease-in-out;
+		}
+
+		@media (max-width: @mobile) {
+			.padding(5% 2%);
 		}
 	}
 }

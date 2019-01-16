@@ -160,7 +160,6 @@ header {
 header nav {
   display: flex;
   justify-content: space-between;
-  width: 60%;
   padding: 2%;
 }
 @media (max-width: 500px) {
@@ -171,7 +170,7 @@ header nav {
 header a {
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
-  padding: 5% 2%;
+  padding: 5%;
   color: #f9f9f9;
   background-color: #3C373B;
   transition: 0.3s ease-in-out;
@@ -179,6 +178,11 @@ header a {
 header a:hover {
   background-color: #4c494c;
   transition: 0.3s ease-in-out;
+}
+@media (max-width: 500px) {
+  header a {
+    padding: 5% 2%;
+  }
 }
 .intro-container {
   display: flex;
