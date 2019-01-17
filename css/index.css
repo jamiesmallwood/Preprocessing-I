@@ -134,3 +134,162 @@ html,
 body {
   height: 100%;
 }
+body {
+  font-size: 62.5%;
+  background-color: #3C373B;
+  color: #f9f9f9;
+}
+.main-container {
+  max-width: 880px;
+  width: 90%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+/* Buddy's Resume */
+/* Colors */
+/* Fonts */
+/* Mixins */
+/* Variables */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 90%;
+  }
+}
+header a {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  padding: 5%;
+  color: #f9f9f9;
+  background-color: #3C373B;
+  transition: 0.3s ease-in-out;
+}
+header a:hover {
+  background-color: #4c494c;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 500px) {
+  header a {
+    padding: 5% 2%;
+  }
+}
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 60vh;
+  background: url('../img/buddy.jpg') no-repeat center center;
+  flex-direction: column;
+  text-align: center;
+}
+.intro-container h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+  padding: 18% 0;
+  color: #61fcff;
+}
+.intro-container h4 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+.contact-container a {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  padding: 2%;
+  border-radius: 5px;
+  color: #3C373B;
+  background-color: #f9f9f9;
+  transition: 0.3s ease-in-out;
+  min-width: 20%;
+  text-align: center;
+}
+.contact-container a:hover {
+  background-color: #4c494c;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 500px) {
+  .contact-container a {
+    padding: 5%;
+    min-width: 40%;
+  }
+}
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .skills-container {
+    flex-direction: column;
+  }
+}
+.skills-container div {
+  padding: 2%;
+}
+.skills-container div p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.skills-container h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #61fcff;
+}
+.work-container {
+  background-color: #f9f9f9;
+  color: #3C373B;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+.work-container td {
+  padding: 2%;
+}
+.work-container p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 2%;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+footer p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8rem;
+}
+/* CSS Animations */
+body {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}

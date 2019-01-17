@@ -57,3 +57,212 @@ html, body {
     height: 100%;
 }
 
+body {
+	font-size: 62.5%;
+	background-color: @darkgray;
+	color: @offwhite;
+}
+
+.main-container {
+	max-width: 880px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Buddy's Resume */
+
+/* Colors */
+
+@darkgray: #3C373B;
+@medgray: #4c494c;
+@offwhite: #f9f9f9;
+@bright: #61fcff;
+
+/* Fonts */
+
+@lato: 'Lato', sans-serif;
+@merri: 'Merriweather', sans-serif;
+
+@small-font: .8rem;
+@med-font: 1rem;
+@large-font: 6rem;
+
+@regular: normal;
+@bold: bold;
+
+/* Mixins */
+
+.flex-centered() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-space() {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-link() {
+	font-family: @lato;
+	font-size: @med-font;
+}
+
+.padding(@padding: 1% 2%) {
+	padding: @padding;
+}
+
+.border-radius(@radius: 10px) {
+	border-radius: @radius;
+}
+
+/* Variables */
+
+@image-url: '../img/buddy.jpg';
+
+@mobile: 500px;
+
+header {
+	.flex-centered();
+	nav {
+		.flex-space();
+		.padding(2%);
+
+		@media (max-width: @mobile) {
+			width: 90%;
+		}
+	}
+
+	a {
+		.nav-link();
+		.padding(5%);
+		color: @offwhite;
+		background-color: @darkgray;
+		transition: 0.3s ease-in-out;
+
+		&:hover {
+			background-color: @medgray;
+			transition: 0.3s ease-in-out;
+		}
+
+		@media (max-width: @mobile) {
+			.padding(5% 2%);
+		}
+	}
+}
+
+.intro-container {
+	.flex-centered();
+	.border-radius(5px);
+	height: 60vh;
+	background: url(@image-url) no-repeat center center;
+	flex-direction: column;
+	text-align: center;
+
+	h1 {
+		font-family: @lato;
+		font-size: @large-font;
+		font-weight: @bold;
+		.padding(18% 0);
+		color: @bright;
+	}
+
+	h4 {
+		font-family: @lato;
+		font-size: @med-font;
+	}
+}
+
+.contact-container {
+	.flex-centered();
+	.padding(2%);
+	
+	a {
+		.nav-link();
+		.padding(2%);
+		.border-radius(5px);
+		color: @darkgray;
+		background-color: @offwhite;
+		transition: 0.3s ease-in-out;
+		min-width: 20%;
+    	text-align: center;
+
+		&:hover {
+			background-color: @medgray;
+			transition: 0.3s ease-in-out;
+		}
+
+		@media (max-width: @mobile) {
+			.padding(5%);
+			min-width: 40%;
+		}
+	}
+}
+
+.skills-container {
+	.flex-centered();
+	.padding(2%);
+
+	@media (max-width: @mobile) {
+		flex-direction: column;
+	}
+
+	div {
+		.padding(2%);
+
+		p {
+			font-family: @lato;
+			font-size: @small-font;
+			line-height: 1.5;
+		}
+	}
+
+	h2 {
+		font-family: @lato;
+		font-size: @med-font + .3;
+		font-weight: @bold;
+		line-height: 1.4;
+		color: @bright;
+	}
+}
+
+.work-container {
+	background-color: @offwhite;
+	color: @darkgray;
+	.border-radius(5px);
+	.flex-centered();
+	.padding(2%);
+
+	td {
+		.padding(2%);
+	}
+	p {
+		font-family: @lato;
+		font-size: @small-font;
+		line-height: 1.5;
+		.padding(2%);
+	}
+}
+
+footer {
+	.flex-centered();
+	.padding(5%);
+
+	p {
+		font-family: @lato;
+		font-size: @small-font;
+	}
+}
+
+/* CSS Animations */
+
+body {
+    -webkit-transition:all .5s ease-in-out;
+         -moz-transition:all .5s ease-in-out;
+               -o-transition:all .5s ease-in-out;
+                     transition:all .5s ease-in-out;
+}
